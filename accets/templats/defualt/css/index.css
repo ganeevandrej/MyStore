@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.categories {
+    position: relative;
+}
+
+
+.categories:hover + .subcategoties {
+    display: block;
+}
+
+.subcategoties:hover {
+    display: block;
+
+}
+
+.subcategoties {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    display: none;
+    background-color: black;
+}
+
+.products-women, .products-men {
+    display: flex;
+}
+
+.item-product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product {
+    display: block;
+    width: 200px;
+    height: auto;
+}
+
+.image {
+    width: 200px;
+    height: auto;
+    background-size: contain;
+}

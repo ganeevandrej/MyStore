@@ -7,7 +7,7 @@ function loadPage($controllerName, $actionName = 'index') {
     $functionName();
 }
 
-function loadTemplate($page) {
+function loadTemplate($page, $rsCategories, $rsProductsWomen, $rsProductsMen) {
 
     include(TemplatePrefix . $page . TemplatePostfix);
 }
