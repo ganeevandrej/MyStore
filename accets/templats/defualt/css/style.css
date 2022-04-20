@@ -46,3 +46,18 @@ body {
     height: auto;
     background-size: contain;
 }
+
+.propducts-items {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product-block {
+    display: flex;
+}
+
+.product-image img{
+    width: 400px;
+    height: auto;
+    background-size: cover;
+}

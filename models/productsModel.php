@@ -17,3 +17,30 @@ function getAllProductsMen() {
 
     return $query->fetchAll();
 }
+
+function getProductsBySubategories($sub_id, $id) {
+    global $pdo;
+    $sql = "SELECT * FROM products WHERE subcategories_id=$sub_id AND categories_id=$id";
+    $query = $pdo->prepare($sql);
+    $query->execute();
+
+    return $query->fetchAll();
+}
+
+function getProductsByCategories($id) {
+    global $pdo;
+    $sql = "SELECT * FROM products WHERE categories_id=$id";
+    $query = $pdo->prepare($sql);
+    $query->execute();
+
+    return $query->fetchAll();
+}
+
+function getProductById($product_id) {
+    global $pdo;
+    $sql = "SELECT * FROM products WHERE id=$product_id";
+    $query = $pdo->prepare($sql);
+    $query->execute();
+    
+    return $query->fetch();
+}

@@ -7,36 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $pageTitle ?></title>
-    <link rel="stylesheet" href="../../accets/templats/defualt/css/index.css">
+    <link rel="stylesheet" href="../../accets/templats/defualt/css/style.css">
+    <script src="../../accets/templats/defualt/js/index.js"></script>
 </head>
 
 <body>
-    <header>
-        <div>
-            <div>
-                <div>
-                    <img src="../../accets/templats/defualt/img/" alt="">
-                </div>
-                <div></div>
-                <div></div>
-                <div>
-                    <?php foreach ($rsCategories as $key => $value) {
-                        $name = $value['name'];
-                        $id = $value['id'];
-                        $subcategories = $value['subcategories'];
-                        echo "<a class='categories' href='#'>$name</a>";
-                        echo "<ul class='subcategoties'>";
-                        foreach ($subcategories as $key => $value) {
-                            $subname = $value['name'];
-                            $sub_id = $value['id'];
-                            echo "<li><a href='/?controller=categories&categories_id=$id&subcategories_id=$sub_id'>$subname</a></ali>";
-                        }
-                        echo "</ul>";
-                    } ?>
-                </div>
-            </div>
-        </div>
-    </header>
+    <?php include('./views/default/header.php')?>
     <main>
         <div>
             <div>баннеры</div>
@@ -50,12 +26,13 @@
                     <?php foreach ($rsProductsWomen as $key => $value) {
                         $name = $value['name'];
                         $img = $value['image'];
+                        $id = $value['id'];
                         $price = $value['price'];
                         echo "<div class='item-product'>";
-                        echo "<a href='#' class='product'>";
+                        echo "<a href='/product/$id/' class='product'>";
                         echo "<img class='image' src='../../accets/templats/defualt/img/$img'></img>";
                         echo "</a>";
-                        echo "<a href='#' class='name'>$name</a>";
+                        echo "<a href='/product/$id/' class='name'>$name</a>";
                         echo "<span class='price'>$price ₽</span>";
                         echo "</div>";
                     } ?>
@@ -70,12 +47,13 @@
                     <?php foreach ($rsProductsMen as $key => $value) {
                         $name = $value['name'];
                         $img = $value['image'];
+                        $id = $value['id'];
                         $price = $value['price'];
                         echo "<div class='item-product'>";
-                        echo "<a href='#' class='product'>";
+                        echo "<a href='/product/$id/' class='product'>";
                         echo "<img class='image' src='../../accets/templats/defualt/img/$img'></img>";
                         echo "</a>";
-                        echo "<a href='#' class='name'>$name</a>";
+                        echo "<a href='/product/$id/' class='name'>$name</a>";
                         echo "<span class='price'>$price ₽</span>";
                         echo "</div>";
                     } ?>

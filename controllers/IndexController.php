@@ -8,7 +8,7 @@ function indexAction() {
     $rsCategories = getAllCategories();
     $rsProductsWomen = getAllProductsWomen();
     $rsProductsMen = getAllProductsMen();
-    $page = 'index';
+    $page = 'home';
 
     loadTemplate($page, $rsCategories, $rsProductsWomen, $rsProductsMen);
 }

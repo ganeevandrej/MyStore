@@ -9,6 +9,24 @@ function getAllsubCategories($id) {
     return $query->fetchAll();
 }
 
+function getSubCategories($id, $sub_id) {
+    global $pdo;
+    $sql = "SELECT * FROM subcategories WHERE categories_id='$id' AND id='$sub_id' ";
+    $query = $pdo->prepare($sql);
+    $query->execute();
+
+    return $query->fetch();
+}
+
+function getCategories($id) {
+    global $pdo;
+    $sql = "SELECT * FROM categories WHERE id=$id";
+    $query = $pdo->prepare($sql);
+    $query->execute();
+
+    return $query->fetch();
+}
+
 function getAllCategories() {
     global $pdo;
     $arr = [];
@@ -25,14 +43,26 @@ function getAllCategories() {
     return $arr;
 }
 
-function getCategoriesId($catId, $subcatId) {
+function getSubcategoriesId($catId, $subcatId) {
     $catId=intval($catId);
     $subcatId=intval($subcatId);
     global $pdo;
-    $sql = "SELECT * FROM subcategories WHERE categories_id='$catId' AND id='$subcatId' ";
+    $sql = "SELECT * FROM products WHERE categories_id='$catId' AND subcategories_id='$subcatId' ";
     $query = $pdo->prepare($sql);
     $query->execute();
-    echo '<pre>';
-    print_r($query->fetch());
-    echo '</pre>';
+    $query->fetch();
+    
+
+    return getProductsBySubategories($subcatId, $catId);
+}
+
+function getCategoriesId($catId) {
+    $catId=intval($catId);
+    global $pdo;
+    $sql = "SELECT * FROM products WHERE id='$catId' ";
+    $query = $pdo->prepare($sql);
+    $query->execute();
+    $query->fetch();
+
+    return getProductsByCategories($catId);
 }
