@@ -4,7 +4,7 @@ const addToCart = (id) => {
     .then((result) => {
         if (result['success']) {
             console.log(result);
-            document.getElementById('cartCountItems').innerHTML = result['countItem'];
+            document.getElementById('countCart').innerHTML = result['countItem'];
         }
         else {
             console.log(result);

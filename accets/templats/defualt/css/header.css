@@ -1,0 +1,174 @@
+.header-block {
+    height: auto;
+    background-color: #2D2D2D;
+}
+
+.wrapper {
+    margin: 0 40px;
+}
+
+.header-inner {
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px 0 0;
+}
+
+.header-logo {
+    width: 220px;
+}
+
+.header-logo img {
+    max-width: 130px;
+}
+
+.header-search {
+    width: 720px;
+    display: flex;
+    align-items: center;
+}
+
+.form-search {
+    width: 700px;
+    display: flex;
+    align-items: center;
+}
+
+.input-search {
+    width: 650px;
+    border: none;
+    border-radius: 2px;
+    height: 40px;
+    background-color: #434343;
+    outline:none;
+    color: white;
+    font-size: 18px;
+}
+
+.button-search {
+    padding: 9px 9px;
+    background-color: #434343;
+    border: none;
+}
+
+.button-search span:hover {
+    filter: invert(80%);
+}
+
+.button-search span{
+    display: block;
+    width: 24px;
+    height: 24px;
+    filter: invert(100%);
+    background: url(../photo/ikon/premium-icon.png) no-repeat;
+}
+
+.header-nav {
+    width: 329px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.header-nav div a{
+    position: relative;
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    margin: 0 10px;
+}
+
+.header-nav div .cart-nav {
+    padding-right: 0;
+}
+
+.user-nav, .regist-nav {
+    font-size: 20px;
+}
+
+.like-nav .like-ikon {
+    display: block;
+    width: 24px;
+    height: 24px;
+    filter: invert(100%);
+    background: url(../photo/ikon/icon-heart.png) no-repeat;
+}
+
+.cart-nav .cart-ikon {
+    display: block;
+    width: 24px;
+    height: 24px;
+    filter: invert(100%);
+    background: url(../photo/ikon/cart.png) no-repeat;
+}
+
+.wrapper-count {
+    display: inline-block;
+    position: absolute;
+    padding: 9px;
+    right: -5px;
+    top: -5px;
+    border-radius: 50%;
+    background-color: #808080;
+}
+
+.countCart {
+    position: absolute;
+    top: 1px;
+    left: 5px;
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.header-categories {
+    width: 220px;
+    display: flex;
+}
+
+.categories-item {
+    width: 110px;
+    padding: 15px 0;
+}
+
+.categories {
+    position: relative;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    margin: auto auto;
+}
+
+
+.categories:hover + .subcategoties {
+    display: block;
+}
+
+.subcategoties:hover {
+    display: block;
+}
+
+.subcategoties {
+    margin: 0;
+    padding: 15px 15px 0;
+    top: 100px;
+    position: absolute;
+    list-style: none;
+    display: none;
+    background-color: #2D2D2D;
+}
+
+.subcategoties li {
+    width: 150px; 
+    margin: 10px 0;
+    padding: 0;
+}
+
+.subcategoties li a{
+    margin: 10px 0;
+    padding: 0;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
