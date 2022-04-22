@@ -6,11 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $rsCategory['name'] ?></title>
-    <link rel="stylesheet" href="../../accets/templats/defualt/css/style.css">
-    <script src="../../accets/templats/defualt/js/index.js"></script>
-</head>
+    <link rel="stylesheet" href="../../accets/templats/defualt/css/footer.css">
 
-<body>
     <?php include('./views/default/header.php') ?>
     <main>
         <div class="products-title">
@@ -33,7 +30,7 @@
             } ?>
         </div>
     </main>
-    <footer></footer>
+    <?php include('./views/default/footer.php')?>
 </body>
 
 </html>

@@ -38,9 +38,25 @@ function getProductsByCategories($id) {
 
 function getProductById($product_id) {
     global $pdo;
-    $sql = "SELECT * FROM products WHERE id=$product_id";
+    $sql = "SELECT * FROM products WHERE id='$product_id' ";
     $query = $pdo->prepare($sql);
     $query->execute();
     
     return $query->fetch();
+}
+
+function getProductsFromCart($itemId) {
+    global $pdo;
+    
+    if ($itemId) {
+        $stringItemId = implode(", ", $itemId);
+       $sql = "SELECT * FROM products WHERE id in ($stringItemId)";
+        $query = $pdo->prepare($sql);
+        $query->execute(); 
+
+        return $query->fetchAll();
+    }
+    else {
+        return null;
+    }
 }

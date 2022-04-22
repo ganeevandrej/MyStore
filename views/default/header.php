@@ -33,7 +33,7 @@
                             </a>
                         </div>
                         <div>
-                            <a class="cart-nav" href="#">
+                            <a class="cart-nav" href="/cart/">
                                 <span class="cart-ikon"></span>
                                 <span class="wrapper-count">
                                     <span id="countCart" class="countCart"><?=$countCart?></span>

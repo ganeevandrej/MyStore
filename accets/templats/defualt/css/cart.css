@@ -1,0 +1,139 @@
+.cart {
+    min-height: 337px; 
+}
+
+.cart-inner {
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-title {
+    color: #333;
+}
+
+.cart-block {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cart-items {
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-item {
+    display: flex;
+    width: 880px;
+    margin-bottom: 20px;
+}
+
+.cart-item-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 715px;
+    padding: 5px 5px 5px 20px;
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cart-item-name {
+    text-decoration: none;
+    color: #333;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.close-item {
+    background-color: white;
+    border: none;
+    padding: 5px;
+}
+
+.close-item img{
+    width: 10px;
+    height: 10px;
+}
+
+.cart-item-image {
+    width: 165px;
+    height: auto;
+}
+
+.cart-item-image img {
+    width: 165px;
+    height: auto;
+}
+
+.cart-item-price {
+    color: #B0B0B1;
+    font-size: 20px;
+}
+
+.total-price {
+    color: #333;
+    font-size: 28px;
+    margin-left: auto;
+}
+
+.check-order-block {
+    width: 290px;
+    padding: 25px;
+    background-color: #f7f7f7;
+    border-radius: 15px;
+    height: 120px;
+}
+
+.check-order {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: auto;
+    height: 120px;
+}
+
+.block-order {
+    display: flex;
+    justify-content: space-between;
+}
+
+.text, .total-amount {
+    color: #333;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.order {
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+    background-color: #525665;
+    color: white;
+    font-size: 22px;
+}
+
+.cart-null {
+    color: #333;
+    font-size: 24px;
+}
+
+.count {
+    display: flex;
+}
+
+.increment, .decrement, .inputCount {
+    margin: 0;
+    border: none;
+    padding: 7px 10px;
+    background-color: #525665;
+    color: white;
+    font-size: 18px;
+}
+
+.inputCount {
+    width: 40px;
+    text-align: center;
+}

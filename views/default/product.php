@@ -5,10 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?=$product['name']?></title>
-    <link rel="stylesheet" href="../../accets/templats/defualt/css/style.css">
-    <script src="../../accets/templats/defualt/js/index.js"></script>
-</head>
-<body>
+    <link rel="stylesheet" href="../../accets/templats/defualt/css/footer.css">
+
     <?php include('./views/default/header.php')?>
     <main>
         <div class="product-panel">Печеньки</div>
@@ -25,13 +23,20 @@
             <div class="product-discription">
                 <h1><?=$name?></h1>
                 <h2><?=$price?></h2>
-                <button id="addCart_<?=$id?>" onclick="addToCart(<?=$id?>)">В корзину</button>
-                <button id="removeCart_<?=$id?>" onclick="removeToCart(<?=$id?>)" style="display: none;">Удалить из карзины</button>
-                <span id="cartCountItems"></span>
+
+                <?php $itemInCArt = in_array($id, $_SESSION['cart'])?>
+
+                <button id="addCart_<?=$id?>" 
+                    <?php if ($itemInCArt) {echo "class='hiden' ";}?>  
+                    onclick="addToCart(<?=$id?>)">Добавить В корзину</button>
+                <button id="removeCart_<?=$id?>" 
+                    <?php if (!$itemInCArt) {echo "class='hiden' ";}?> 
+                    onclick="removeFromCart(<?=$id?>)">Удалить из карзины</button>
             </div>
         </div>
         <div></div>
         <div></div>
     </main>
+    <?php include('./views/default/footer.php')?>
 </body>
 </html>

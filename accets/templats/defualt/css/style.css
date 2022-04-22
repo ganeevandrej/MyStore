@@ -44,3 +44,17 @@ body {
     height: auto;
     background-size: cover;
 }
+
+.hiden {
+    display: none;
+}
+
+.margin-cart {
+    margin-top: auto;
+    padding-bottom: 30px;
+}
+
+.size-text {
+    color: #333;
+    font-size: 28px;
+}

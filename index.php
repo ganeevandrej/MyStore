@@ -1,11 +1,12 @@
 <?php
 session_start();
 
-if (! isset($_SESSION["cart"])) {
-    echo "hi!";
+if ( (!isset($_SESSION["cart"])) || (!isset($_SESSION["like"])) ) {
+    $_SESSION["like"] = [];
     $_SESSION["cart"] = [];
 }
 // $_SESSION["cart"] = [];
+
 
 include('./config/config.php');
 include('./config/db.php');

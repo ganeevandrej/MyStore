@@ -1,0 +1,48 @@
+.footer {
+    height: auto;
+    background-color: #2D2D2D;
+}
+
+.footet-inner {
+    padding: 10px 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footet-logo .logo img{
+    width: 150px;
+}
+
+.footer-info {
+    width: 100%;
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.info-contact {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-contact span {
+    color: white;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+.info-network, .info-bank {
+    display: flex;
+    width: 270px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.network-ikon img {
+    filter: invert(80%);
+}
+
+.bank-ikon img {
+    width: 65px;
+}

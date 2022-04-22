@@ -58,11 +58,7 @@
             </div>
         </div>
     </main>
-    <footer>
-        <div>
-            footer
-        </div>
-    </footer>
+    <?php include('./views/default/footer.php')?>
 </body>
 
 </html>

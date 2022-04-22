@@ -80,6 +80,11 @@
 }
 
 .header-nav div .cart-nav {
+    margin-right: 0;
+}
+
+
+.header-nav div .cart-nav {
     padding-right: 0;
 }
 
@@ -114,6 +119,7 @@
 }
 
 .countCart {
+    height: auto;
     position: absolute;
     top: 1px;
     left: 5px;
