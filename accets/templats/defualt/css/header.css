@@ -118,7 +118,7 @@
     background-color: #808080;
 }
 
-.countCart {
+.countCart, .countLike {
     height: auto;
     position: absolute;
     top: 1px;
@@ -162,6 +162,7 @@
     position: absolute;
     list-style: none;
     display: none;
+    z-index: 15;
     background-color: #2D2D2D;
 }
 

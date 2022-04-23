@@ -11,17 +11,44 @@ const addToCart = (id) => {
     })
 }
 
-const addToLike = (id) => {
-    fetch("http://myshop/cart/addtolike/" + id + "/") 
-    .then(response => response.json())
-    .then((result) => {
-        if (result['success']) {
-            document.getElementById('countCart').innerHTML = result['countItem'];
-        }
-        
-        document.getElementById('addLike_' + id).style.display = 'none';
-        document.getElementById('removeLike_' + id).style.display = 'block';
-    })
+const toggleLike = (id) => {
+    
+    let elem1 = document.getElementById('like_' + id).classList.contains('hiden');
+    // let elem2 = document.getElementById('active_like_' + id).classList.contains('hiden');
+    if (!elem1) {
+        fetch("http://myshop/like/addtolike/" + id + "/") 
+            .then(response => response.json())
+            .then((result) => {
+                if (result['success']) {
+                    document.getElementById('countLike').innerHTML = result['countItem'];
+                    document.getElementById('like_' + id).classList.add('hiden');
+                    document.getElementById('active_like_' + id).classList.remove('hiden');
+                    // document.getElementById('active_like_' + id).classList.remove('hiden');
+                    // document.getElementById('like_' + id).style.display = 'none';
+                    // document.getElementById('active_like_' + id).style.display = 'block';
+                }
+                else{
+                   alert('Не удалось добавить товар в избранное'); 
+                }
+            })
+    }
+    else {
+        fetch("http://myshop/like/removefromlike/" + id + "/") 
+            .then(response => response.json())
+            .then((result) => {
+                if (result['success']) {
+                    document.getElementById('countLike').innerHTML = result['countItem'];
+                    document.getElementById('active_like_' + id).classList.add('hiden');
+                    document.getElementById('like_' + id).classList.remove('hiden');
+                    // document.getElementById('like_' + id).style.display = 'block';
+                    // document.getElementById('active_like_' + id).style.display = 'none'
+                }
+                else{
+                    alert('Не удалось удалить товар из избранное'); 
+                 }
+            })
+    }
+    
 }
 
 const removeFromCart = (id) => {
@@ -43,7 +70,8 @@ const removeFromCartPage = (id) => {
         if (result['success']) {
             document.getElementById('countCart').innerHTML = result['countItem'];
         }
-        document.getElementById('itemCart_' + id).style.display = 'none';
+
+        document.getElementById('itemCart_' + id).remove();
         totalPrice();
     })
 }
@@ -60,15 +88,24 @@ const countPrice = (id) => {
 }
 
 const totalPrice = () => {
-    
     let totalprice = document.getElementsByClassName('total-price');
-    let sum = 0;
+    console.log(totalprice);
 
-    for (let i=0; i<totalprice.length; i++) {
+    if((totalprice.length) > 0) {
+        let sum = 0;
+        
+        for (let i=0; i<totalprice.length; i++) {
         sum += +(totalprice[i].getAttribute('value'));
-    }
+        }
 
-    document.getElementById('totalAmount').innerHTML = sum + '.00 ₽';
+        document.getElementById('totalAmount').innerHTML = sum + '.00 ₽';
+    }
+    else {
+        document.getElementById('cartBlock').style.display = 'none';
+        document.getElementById('cartNull').style.display = 'block';
+    }
+    
+    
 }
 
 const increment = (id) => {

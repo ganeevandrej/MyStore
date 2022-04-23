@@ -6,6 +6,7 @@ if ( (!isset($_SESSION["cart"])) || (!isset($_SESSION["like"])) ) {
     $_SESSION["cart"] = [];
 }
 // $_SESSION["cart"] = [];
+// $_SESSION["like"] = [];
 
 
 include('./config/config.php');

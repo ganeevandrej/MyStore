@@ -1,0 +1,80 @@
+.like-block {
+    min-height: 345px;
+}
+
+.like-inner {
+    display: flex;
+    flex-direction: column;
+}
+
+.like-title {
+    color: #333;
+}
+
+.like-null {
+    color: #333;
+    font-size: 24px;
+}
+
+.like-items {
+    display: flex;
+    flex-direction: column;
+}
+
+.like-item {
+    display: flex;
+    width: 1270px;
+    margin-bottom: 20px;
+}
+
+.like-item-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 1000px;
+    padding: 25px;
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.like-item-name {
+    text-decoration: none;
+    color: #333;
+    font-size: 26px;
+    font-weight: 800;
+}
+
+.close-item {
+    background-color: white;
+    border: none;
+    padding: 15px;
+}
+
+.close-item img{
+    width: 24px;
+    height: 24px;
+}
+
+.like-item-image {
+    width: 240px;
+    height: auto;
+}
+
+.like-item-image img {
+    width: 240px;
+    height: auto;
+}
+
+.like-item-price {
+    color: #B0B0B1;
+    font-size: 24px;
+}
+
+.total-price {
+    color: #333;
+    font-size: 28px;
+    margin-left: auto;
+}

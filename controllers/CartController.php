@@ -8,7 +8,7 @@ function indexAction () {
 
     $rsProductsFromCart = getProductsFromCart($itemId);
     $rsCategories = getAllCategories();
-    $page = 'Cart';
+    $page = 'cart';
 
     loadCartPage($page, $rsProductsFromCart, $rsCategories);
 }

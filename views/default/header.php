@@ -25,10 +25,10 @@
                         <div><a class="user-nav" href="#">Войти</a></div>
                         <div><a class="regist-nav" href="#">Регистрация</a></div>
                         <div>
-                            <a class="like-nav" href="#">
+                            <a class="like-nav" href="/like/">
                                 <span class="like-ikon"></span>
                                 <span class="wrapper-count">
-                                    <span></span>
+                                    <span id="countLike" class="countLike"><?=$countLike?></span>
                                 </span>
                             </a>
                         </div>
