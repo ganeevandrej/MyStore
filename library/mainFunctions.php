@@ -8,7 +8,7 @@ function loadPage($controllerName, $actionName = 'index')
     $functionName();
 }
 
-function loadTemplate($page, $rsCategories, $rsProductsWomen, $rsProductsMen)
+function loadTemplate($page, $rsCategories, $rsProductsWomen, $rsProductsMen, $rsProductsPopular)
 {
     $countCart = count($_SESSION['cart']);
     $countLike = count($_SESSION['like']);

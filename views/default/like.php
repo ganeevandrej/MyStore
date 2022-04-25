@@ -15,8 +15,10 @@
             <div class="like-inner">
                 <h1 class="like-title">Избранное</h1>
                 <div>
+                <?php if (count($rsProductsFromLike) > 0) : ?>
                 <?php foreach ($rsProductsFromLike as $key => $value) : ?>
-                            <div id="itemLike_<?= $value['id'] ?>" class="like-item">
+                            <div id="itemLike_<?= $value['id'] ?>" 
+                            class="<?php if ( count($countLike) === 0) echo 'hiden'?> like-item">
                                 <div class="like-item-image">
                                     <a href="/product/<?= $value['id'] ?>/">
                                         <img src="/accets/templats/defualt/img/<?= $value['image'] ?>">
@@ -30,7 +32,7 @@
                                         </a>
                                         <button class="close-item" id="removelike_<?= $value['id'] ?>" 
                                         <?php if (!$itemInlike) {echo "class='hiden' ";} ?> 
-                                        onclick="removeFromlikePage(<?= $value['id'] ?>)">
+                                        onclick="removeFromlikePage(<?=$value['id']?>)">
                                             <img src="/accets/templats/defualt/photo/ikon/close.png">
                                         </button>
                                     </div>
@@ -43,7 +45,9 @@
                             </div>
                         <?php endforeach; ?>
                 </div>
-                <span class="like-null">Вам еще ничего не понравилось</span>
+                <?php endif; ?>
+                <span class="<?php if (count($rsProductsFromLike) > 0) echo 'hiden'?> like-null" 
+                id="likeNull">Вам еще ничего не понравилось</span>
             </div>
         </div>
     </main>

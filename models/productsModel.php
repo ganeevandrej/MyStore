@@ -11,7 +11,16 @@ function getAllProductsWomen() {
 
 function getAllProductsMen() {
     global $pdo;
-    $sql = "SELECT * FROM products Where categories_id=2 AND subcategories_id>1 LIMIT 8";
+    $sql = "SELECT * FROM products Where categories_id=2 AND subcategories_id>5 LIMIT 8";
+    $query = $pdo->prepare($sql);
+    $query->execute();
+
+    return $query->fetchAll();
+}
+
+function getAllProductsPopular() {
+    global $pdo;
+    $sql = "SELECT * FROM products Where subcategories_id = 1 OR subcategories_id = 5";
     $query = $pdo->prepare($sql);
     $query->execute();
 

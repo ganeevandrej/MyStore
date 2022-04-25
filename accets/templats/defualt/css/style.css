@@ -4,84 +4,17 @@ body {
     font-family: 'Akshar', sans-serif;
 }
 
-.wrapper {
-    margin: 0 40px;
-}
-
-.products-women, .products-men {
-    display: flex;
-}
-
-.item-product {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.product-img {
-    display: flex;
-    flex-direction: column;
-}
-
-.photo {
-    width: 240px;
-    height: 335px;
-    background-size: contain;
-}
-
-.product-before-like-w, 
-.product-before-like-m {
-    position: absolute;
-    width: 24px;
-    padding: 8px;
-    border-radius: 50%;
-    background-color: #fff;
-    align-self: end;
-    margin-right: 5px;
+button, a {
     cursor: pointer;
 }
 
-.product-before-like-w {
-    top: 180px;
-}
-
-.product-before-like-m {
-    top: 575px;
+.wrapper {
+    width: 1270px;
+    margin: 0 40px;
 }
 
 .block-img {
     position: relative;
-}
-
-.like {
-    display: block;
-    width: 24px;
-    height: 24px;
-    background:  url(../photo/ikon/icon-heart.png) no-repeat;
-    filter: invert(60%);
-}
-
-.product-before-like-w:hover .like {
-    filter: invert(30%);
-}
-
-.active-like {
-    display: block;
-    width: 24px;
-    height: 24px;
-    background: url(../photo/ikon/like.png) no-repeat;
-}
-
-.product {
-    display: block;
-    width: 240px;
-    height: auto;
-}
-
-.image {
-    width: 200px;
-    height: auto;
-    background-size: contain;
 }
 
 .propducts-items {
@@ -111,4 +44,24 @@ body {
 .size-text {
     color: #333;
     font-size: 28px;
+}
+
+.propducts-items {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item-product {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin-right: 23px;
+}
+
+.item-product:nth-child(4n) {
+    margin-right: 0;
+}
+
+.product-photo {
+    width: 300px;
 }

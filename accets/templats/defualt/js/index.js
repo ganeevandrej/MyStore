@@ -4,17 +4,28 @@ const addToCart = (id) => {
     .then((result) => {
         if (result['success']) {
             document.getElementById('countCart').innerHTML = result['countItem'];
+            document.getElementById('addCart_' + id).classList.add('hiden');
+            document.getElementById('removeCart_' + id).classList.remove('hiden');
         }
-        
-        document.getElementById('addCart_' + id).style.display = 'none';
-        document.getElementById('removeCart_' + id).style.display = 'block';
+    })
+}
+
+const addToCartFromHome = (id) => {
+    fetch("http://myshop/cart/addtocart/" + id + "/") 
+    .then(response => response.json())
+    .then((result) => {
+        if (result['success']) {
+            document.getElementById('countCart').innerHTML = result['countItem'];
+            document.getElementById('infoAddCart_' + id).classList.add('hiden');
+            document.getElementById('infoRemoveCart_' + id).classList.remove('hiden');
+        }
     })
 }
 
 const toggleLike = (id) => {
     
     let elem1 = document.getElementById('like_' + id).classList.contains('hiden');
-    // let elem2 = document.getElementById('active_like_' + id).classList.contains('hiden');
+
     if (!elem1) {
         fetch("http://myshop/like/addtolike/" + id + "/") 
             .then(response => response.json())
@@ -23,9 +34,6 @@ const toggleLike = (id) => {
                     document.getElementById('countLike').innerHTML = result['countItem'];
                     document.getElementById('like_' + id).classList.add('hiden');
                     document.getElementById('active_like_' + id).classList.remove('hiden');
-                    // document.getElementById('active_like_' + id).classList.remove('hiden');
-                    // document.getElementById('like_' + id).style.display = 'none';
-                    // document.getElementById('active_like_' + id).style.display = 'block';
                 }
                 else{
                    alert('Не удалось добавить товар в избранное'); 
@@ -40,8 +48,6 @@ const toggleLike = (id) => {
                     document.getElementById('countLike').innerHTML = result['countItem'];
                     document.getElementById('active_like_' + id).classList.add('hiden');
                     document.getElementById('like_' + id).classList.remove('hiden');
-                    // document.getElementById('like_' + id).style.display = 'block';
-                    // document.getElementById('active_like_' + id).style.display = 'none'
                 }
                 else{
                     alert('Не удалось удалить товар из избранное'); 
@@ -51,15 +57,28 @@ const toggleLike = (id) => {
     
 }
 
-const removeFromCart = (id) => {
-    fetch("http://myshop/cart/removefromlike/" + id + "/") 
+const removeFromCartHome = (id) => {
+    fetch("http://myshop/cart/removefromcart/" + id + "/") 
     .then(response => response.json())
     .then((result) => {
         if (result['success']) {
             document.getElementById('countCart').innerHTML = result['countItem'];
+            document.getElementById('infoRemoveCart_' + id).classList.add('hiden');
+            document.getElementById('infoAddCart_' + id).classList.remove('hiden');
         }
-        document.getElementById('addLike_' + id).style.display = 'block';
-        document.getElementById('removeLike_' + id).style.display = 'none';
+        
+    })
+}
+
+const removeFromCart = (id) => {
+    fetch("http://myshop/cart/removefromcart/" + id + "/") 
+    .then(response => response.json())
+    .then((result) => {
+        if (result['success']) {
+            document.getElementById('countCart').innerHTML = result['countItem'];
+            document.getElementById('removeCart_' + id).classList.add('hiden');
+            document.getElementById('addCart_' + id).classList.remove('hiden');
+        }
     })
 }
 
@@ -72,7 +91,28 @@ const removeFromCartPage = (id) => {
         }
 
         document.getElementById('itemCart_' + id).remove();
+        console.log(result['countItem']);
+        if(result['countItem'] === 0) {
+            document.getElementById('cartNull').classList.remove('hiden');
+        }
         totalPrice();
+    })
+}
+
+const removeFromlikePage = (id) => {
+    fetch("http://myshop/like/removefromlike/" + id + "/") 
+    .then(response => response.json())
+    .then((result) => {
+        if (result['success']) {
+            document.getElementById('countLike').innerHTML = result['countItem'];
+            document.getElementById('itemLike_' + id).remove();
+            if(result['countItem'] === 0) {
+                document.getElementById('likeNull').classList.remove('hiden');
+            }
+        }
+
+        
+        
     })
 }
 

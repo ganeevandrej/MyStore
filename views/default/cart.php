@@ -60,7 +60,6 @@
                                 </div>
                             </div>
                         <?php endforeach; ?>
-                        
                     </div>
                     <div class="check-order-block">
                         <div class="check-order">
@@ -73,7 +72,7 @@
                     </div>
                 </div>
                 <?php endif; ?>
-                <span class="cart-null" <?php if (count($rsProductsFromCart) > 0) echo "style='display: none;'"?>
+                <span class="<?php if (count($rsProductsFromCart) > 0) echo 'hiden' ?> cart-null"
                 id="cartNull">Ваша Корзина пуста</span>
             </div>
         </div>

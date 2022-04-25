@@ -5,10 +5,11 @@ include('./models/productsModel.php');
 
 function indexAction() {
 
+    $rsProductsPopular = getAllProductsPopular();
     $rsCategories = getAllCategories();
     $rsProductsWomen = getAllProductsWomen();
     $rsProductsMen = getAllProductsMen();
     $page = 'home';
 
-    loadTemplate($page, $rsCategories, $rsProductsWomen, $rsProductsMen);
+    loadTemplate($page, $rsCategories, $rsProductsWomen, $rsProductsMen, $rsProductsPopular);
 }
