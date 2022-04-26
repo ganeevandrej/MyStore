@@ -12,6 +12,8 @@ function loadTemplate($page, $rsCategories, $rsProductsWomen, $rsProductsMen, $r
 {
     $countCart = count($_SESSION['cart']);
     $countLike = count($_SESSION['like']);
+    $user = $_SESSION['user'];
+    
     include(TemplatePrefix . $page . TemplatePostfix);
 }
 
@@ -19,6 +21,8 @@ function loadCategories($page, $rsCategories, $rsCategoties, $rsCategory)
 {
     $countCart = count($_SESSION['cart']);
     $countLike = count($_SESSION['like']);
+    $user = $_SESSION['user'];
+
     include(TemplatePrefix . $page . TemplatePostfix);
 }
 
@@ -26,6 +30,8 @@ function loadProduct($page, $product, $rsCategories)
 {
     $countCart = count($_SESSION['cart']);
     $countLike = count($_SESSION['like']);
+    $user = $_SESSION['user'];
+
     include(TemplatePrefix . $page . TemplatePostfix);
 }
 
@@ -33,6 +39,8 @@ function loadCartPage($page, $rsProductsFromCart, $rsCategories)
 {
     $countCart = count($_SESSION['cart']);
     $countLike = count($_SESSION['like']);
+    $user = $_SESSION['user'];
+
     $sum = 0;
     if ($countCart) {
         foreach ($rsProductsFromCart as $key => $value) {
@@ -44,8 +52,34 @@ function loadCartPage($page, $rsProductsFromCart, $rsCategories)
 }
 
 function loadLikePage($page, $rsProductsFromLike, $rsCategories) {
+    
     $countCart = count($_SESSION['cart']);
     $countLike = count($_SESSION['like']);
+    $user = $_SESSION['user'];
+
+    include(TemplatePrefix . $page . TemplatePostfix);
+}
+
+function loadAuthPage($page, $rsCategories, $inputValidation) {
+    $countCart = count($_SESSION['cart']);
+    $countLike = count($_SESSION['like']);
+    $user = $_SESSION['user'];
+
+    include(TemplatePrefix . $page . TemplatePostfix);
+}
+
+function loadContactPage($userdata, $rsCategories, $page) {
+    $countCart = count($_SESSION['cart']);
+    $countLike = count($_SESSION['like']);
+    $user = $_SESSION['user'];
+
+    include(TemplatePrefix . $page . TemplatePostfix);
+}
+
+function loadUserPage($rsCategories, $page) {
+    $countCart = count($_SESSION['cart']);
+    $countLike = count($_SESSION['like']);
+    $user = $_SESSION['user'];
 
     include(TemplatePrefix . $page . TemplatePostfix);
 }

@@ -25,8 +25,19 @@
             </div>
         </div>
     </div>
+    <div id="recoveryBlockOk" class="recoveryBlockOk hiden">
+        <div class="flex-block">
+            <span id="textBlockOk"></span>
+            <span class="ikon-ok"></span>
+        </div>
+    </div>
+    <div id="recoveryBlockNo" class="recoveryBlockNo hiden">
+        <div class="flex-block">
+            <span id="textBlockNo"></span>
+            <span class="ikon-no"></span>
+        </div>
+    </div>
 </footer>
-<script src="../../accets/templats/defualt/js/index.js"></script>
 <script src="../../accets/templats/defualt/js/slaiderWomen.js"></script>
 <script src="../../accets/templats/defualt/js/slaiderMen.js"></script>
 <script src="../../accets/templats/defualt/js/slaiderPopular.js"></script>

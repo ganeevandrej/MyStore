@@ -1,7 +1,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Akshar:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,100;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../accets/templats/defualt/css/style.css">
     <link rel="stylesheet" href="../../accets/templats/defualt/css/header.css">
-    <!-- <script src="../../accets/templats/defualt/js/index.js"></script> -->
+    <link rel="stylesheet" href="../../accets/templats/defualt/css/footer.css">
+    <script src="../../accets/templats/defualt/js/index.js"></script>
     </head>
 
     <body>
@@ -22,8 +23,13 @@
                         </form>
                     </div>
                     <div class="header-nav">
-                        <div><a class="user-nav" href="#">Войти</a></div>
-                        <div><a class="regist-nav" href="#">Регистрация</a></div>
+                        <?php if($_SESSION['user']) : ?>
+                            <div><a class="user-nav" href="/user/"><?=$_SESSION['user']['login']?></a></div>
+                            <div><a class="regist-nav" href="/logout/">Выйти</a></div>
+                        <?php else :?>
+                        <div><a class="user-nav" href="/login/">Войти</a></div>
+                        <div><a class="regist-nav" href="/auth/">Регистрация</a></div>
+                        <?php endif?>
                         <div>
                             <a class="like-nav" href="/like/">
                                 <span class="like-ikon"></span>

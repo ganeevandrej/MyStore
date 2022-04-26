@@ -5,6 +5,8 @@ if ( (!isset($_SESSION["cart"])) || (!isset($_SESSION["like"])) ) {
     $_SESSION["like"] = [];
     $_SESSION["cart"] = [];
 }
+
+// $_SESSION["user"] = [];
 // $_SESSION["cart"] = [];
 // $_SESSION["like"] = [];
 
