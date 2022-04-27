@@ -68,7 +68,7 @@ function loadAuthPage($page, $rsCategories, $inputValidation) {
     include(TemplatePrefix . $page . TemplatePostfix);
 }
 
-function loadContactPage($userdata, $rsCategories, $page) {
+function loadUserPage($rsCategories, $page) {
     $countCart = count($_SESSION['cart']);
     $countLike = count($_SESSION['like']);
     $user = $_SESSION['user'];
@@ -76,7 +76,7 @@ function loadContactPage($userdata, $rsCategories, $page) {
     include(TemplatePrefix . $page . TemplatePostfix);
 }
 
-function loadUserPage($rsCategories, $page) {
+function loadContactsPage($page, $rsCategories, $message, $messageok = null) {
     $countCart = count($_SESSION['cart']);
     $countLike = count($_SESSION['like']);
     $user = $_SESSION['user'];

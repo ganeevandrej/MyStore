@@ -50,3 +50,7 @@ function removeFromCartAction() {
     
     echo json_encode($arrData);
 }
+
+function orderAction()  {
+    print_r($_POST);
+}

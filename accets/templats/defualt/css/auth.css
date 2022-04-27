@@ -1,0 +1,102 @@
+.title-reg {
+    margin: 0;
+    padding-top: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.form-reg {
+    width: 100%;
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center;
+    padding: 0 0 30px;
+}
+
+.form-login {
+    width: 100%;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    padding: 0 0 20px;
+}
+
+.inner-reg {
+    width: 1000px;
+    margin: auto;
+    min-height: 345px;
+}
+
+.reg-item-form {
+    display: flex;
+    flex-direction: column;
+    width: 480px;
+    margin-left: 40px;
+}
+
+.reg-item-form:nth-child(2n) {
+    margin-left: 0;
+}
+
+.login-item-form {
+    display: flex;
+    flex-direction: column;
+    width: 480px;
+}
+
+.reg-item-form label, 
+.login-item-form label {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.reg-item-form .input:focus {
+    border:3px solid #B0B0B1;
+}
+
+.login-item-form .input:focus {
+    border:3px solid #B0B0B1;
+}
+
+.reg-item-form input, 
+.login-item-form input {
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    outline: none;
+}
+
+.reg-item-form label::after, .login-item-form label::after {
+    content: '';
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    margin-left: 5px;
+    margin-top: 5px;
+    background: url(../photo/ikon/red.png) no-repeat;
+    background-size: cover;
+}
+
+.btm-reg {
+    padding: 15px 40px;
+    background-color: #525665;
+    border: none;
+    color: white;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.reg-message-form {
+    width: 1000px;
+    padding: 20px;
+}
+
+.block-message {
+    width: 400px;
+    padding: 20px;
+    margin: auto;
+    background-color: #e34234;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+}

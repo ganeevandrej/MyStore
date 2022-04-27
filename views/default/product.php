@@ -28,10 +28,10 @@
 
                 <button id="addCart_<?=$id?>" 
                     <?php if ($itemInCArt) {echo "class='hiden' ";}?>  
-                    onclick="addToCart(<?=$id?>)">Добавить В корзину</button>
+                    onclick="addToCart(<?=$id?>, <?=$_SESSION['user']?>)">Добавить В корзину</button>
                 <button id="removeCart_<?=$id?>" 
                     <?php if (!$itemInCArt) {echo "class='hiden' ";}?> 
-                    onclick="removeFromCart(<?=$id?>)">Удалить из карзины</button>
+                    onclick="removeFromCart(<?=$id?>, <?=$_SESSION['user']?>)">Удалить из карзины</button>
             </div>
         </div>
         <div></div>

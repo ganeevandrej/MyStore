@@ -1,0 +1,117 @@
+.categories {
+    
+}
+
+.item-product {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin-right: 23px;
+    margin-top: 20px;
+}
+
+.product-photo {
+    width: 300px;
+    height: 420px;
+}
+
+.categories-product-info {
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 5px;
+}
+
+.categories-info-name {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    font-size: 20px;
+    font-weight: 500;
+    
+}
+
+.categories-info-price {
+    font-size: 20px;
+    
+}
+
+.categories-info-removecart {
+    display: block;
+    background: url(../photo/ikon/delete.png) no-repeat;
+    width: 24px;
+    height: 24px;
+}
+
+.categories-info-cart-price {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.categories-actioncart {
+    display: flex;
+}
+
+.categories-info-addcart {
+    display: block;
+    background: url(../photo/ikon/add.png) no-repeat;
+    width: 24px;
+    height: 24px;
+}
+
+
+.categories-product-img {
+    display: flex;
+    height: 420px;
+}
+
+.categories-like {
+    display: block;
+    width: 24px;
+    height: 24px;
+    background:  url(../photo/ikon/icon-heart.png) no-repeat;
+    filter: invert(60%);
+}
+
+.categories-product-before-like:hover .like {
+    filter: invert(30%);
+}
+
+.categories-active-like {
+    display: block;
+    width: 24px;
+    height: 24px;
+    background: url(../photo/ikon/like.png) no-repeat;
+}
+
+.categories-product-before-like {
+    position: absolute;
+    width: 24px;
+    padding: 8px;
+    margin-bottom: 370px;
+    margin-left: 250px;
+    border-radius: 50%;
+    background-color: #fff;
+    align-self: end;
+    cursor: pointer;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 24px;
+    color:#333;
+}
+
+.item-product:nth-child(4n) {
+    margin-right: 0;
+}
+
+.propducts-items {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 0 20px;
+}

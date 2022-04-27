@@ -17,49 +17,41 @@
                 <h1 class="cart-title">Корзина</h1>
                 <div id="cartBlock" class="cart-block" <?php if (count($rsProductsFromCart) === 0) echo "class='hiden'; " ?>>
                     <div class="cart-items">
-                    <?php if (count($rsProductsFromCart) > 0) : ?>
-                        <?php foreach ($rsProductsFromCart as $key => $value) : ?>
-                            <div id="itemCart_<?= $value['id'] ?>" class="cart-item">
-                                <div class="cart-item-image">
-                                    <a href="/product/<?= $value['id'] ?>/">
-                                        <img src="/accets/templats/defualt/img/<?= $value['image'] ?>">
-                                    </a>
-                                </div>
-                                <div class="cart-item-info">
-                                    <div class="info-row">
-                                        <a class="cart-item-name" href="/product/<?= $value['id'] ?>/">
-                                            <?= $value['name'] ?>
-                                            <span>размер</span>
+                        <?php if (count($rsProductsFromCart) > 0) : ?>
+                            <?php foreach ($rsProductsFromCart as $key => $value) : ?>
+                                <div id="itemCart_<?= $value['id'] ?>" class="cart-item">
+                                    <div class="cart-item-image">
+                                        <a href="/product/<?= $value['id'] ?>/">
+                                            <img src="/accets/templats/defualt/img/<?= $value['image'] ?>">
                                         </a>
-                                        <button class="close-item" id="removeCart_<?= $value['id'] ?>" 
-                                        <?php if (!$itemInCArt) {echo "class='hiden' ";} ?> 
-                                        onclick="removeFromCartPage(<?= $value['id'] ?>)">
-                                            <img src="/accets/templats/defualt/photo/ikon/close.png">
-                                        </button>
                                     </div>
-                                    <div class="info-row margin-cart">
-                                        <span id="cartPrice_<?= $value['id'] ?>" 
-                                        class="cart-item-price" 
-                                        value="<?= $value['price'] ?>"><?= $value['price'] ?>.00 ₽</span>
-                                    </div>
-                                    <div class="info-row">
-                                        <div class="count">
-                                            <button <?php if ($inpitCount === 1) echo "disabled='true' " ?> 
-                                            class="decrement" id="decrement_<?= $value['id'] ?>" 
-                                            onclick="decrement(<?= $value['id'] ?>)">-</button>
-                                            <input type="text" id="inputCount_<?= $value['id'] ?>" 
-                                            disabled="true" class="inputCount" value="<?= $inpitCount ?>">
-                                            <button class="increment" 
-                                            onclick="increment(<?= $value['id'] ?>)">+</button>
+                                    <div class="cart-item-info">
+                                        <div class="info-row">
+                                            <a class="cart-item-name" href="/product/<?= $value['id'] ?>/">
+                                                <?= $value['name'] ?>
+                                                <span>размер</span>
+                                            </a>
+                                            <button class="close-item" id="removeCart_<?= $value['id'] ?>" <?php if (!$itemInCArt) {
+                                                                                                                echo "class='hiden' ";
+                                                                                                            } ?> onclick="removeFromCartPage(<?= $value['id'] ?>)">
+                                                <img src="/accets/templats/defualt/photo/ikon/close.png">
+                                            </button>
                                         </div>
-                                        <span id="totalPrice_<?= $value['id'] ?>" 
-                                        class="total-price" 
-                                        value="<?= $value['price'] ?>"><?= $value['price'] ?></span>
-                                        <span class="size-text">.00 ₽</span>
+                                        <div class="info-row margin-cart">
+                                            <span id="cartPrice_<?= $value['id'] ?>" class="cart-item-price" value="<?= $value['price'] ?>"><?= $value['price'] ?>.00 ₽</span>
+                                        </div>
+                                        <div class="info-row">
+                                            <div class="count">
+                                                <button <?php if ($inpitCount === 1) echo "disabled='true' " ?> class="decrement" id="decrement_<?= $value['id'] ?>" onclick="decrement(<?= $value['id'] ?>)">-</button>
+                                                <input name="inputCount_<?= $value['id'] ?>" type="text" id="inputCount_<?= $value['id'] ?>" disabled="true" class="inputCount" value="<?= $inpitCount ?>">
+                                                <button class="increment" onclick="increment(<?= $value['id'] ?>)">+</button>
+                                            </div>
+                                            <span id="totalPrice_<?= $value['id'] ?>" class="total-price" value="<?= $value['price'] ?>"><?= $value['price'] ?></span>
+                                            <span class="size-text">.00 ₽</span>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        <?php endforeach; ?>
+                            <?php endforeach; ?>
                     </div>
                     <div class="check-order-block">
                         <div class="check-order">
@@ -71,9 +63,8 @@
                         </div>
                     </div>
                 </div>
-                <?php endif; ?>
-                <span class="<?php if (count($rsProductsFromCart) > 0) echo 'hiden' ?> cart-null"
-                id="cartNull">Ваша Корзина пуста</span>
+            <?php endif; ?>
+            <span class="<?php if (count($rsProductsFromCart) > 0) echo 'hiden' ?> cart-null" id="cartNull">Ваша Корзина пуста</span>
             </div>
         </div>
     </main>

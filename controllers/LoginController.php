@@ -17,7 +17,7 @@ function loginAction() {
     $inputValidation = checkLogintParams($email, $pwd1);
     $result = loginUser($email);
 
-    if(!$inputValidation && !password_verify($pwd1 ,$result['password'])) {
+    if(!$inputValidation && !password_verify($pwd1, $result['password'])) {
         $inputValidation['success'] = false;
         $inputValidation['message'] = "Неверный email или пароль";
     }

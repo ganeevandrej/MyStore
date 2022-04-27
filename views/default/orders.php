@@ -5,13 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ваши заказы</title>
+    <link rel="stylesheet" href="../../accets/templats/defualt/css/user.css">
 
     <?php include('./views/default/header.php')?>
     <main>
-        <div>
-            <div>
-                <div>
-                    <div>
+        <div class="wrapper">
+            <div  class="inner">
+                <div class="inner-navigation">
+                    <div class="block-href">
                         <a href="/user/">История заказов</a>
                         <a href="/user/adress/">Адрес доставки</a>
                         <a href="/user/disconds/">Скидки и бонусы</a>
@@ -19,8 +20,8 @@
                         <a href="/logout/">выход</a>
                     </div>
                 </div>
-                <div>
-                    <h2>История заказов</h2>
+                <div class="inner-content">
+                    <h2 class="content-title">История заказов</h2>
                     <div></div>
                 </div>
             </div>

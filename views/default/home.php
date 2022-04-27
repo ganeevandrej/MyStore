@@ -41,12 +41,17 @@
                                     <?php $itemInCArt = in_array($value['id'], $_SESSION['like']) ?>
                                     <div class='slaider-item-Popular'>
                                         <div class="product-img">
-                                            <a href='/product/<?= $value['id'] ?>/' class='product'>
-                                                <img src="../../accets/templats/defualt/img/<?= $value['image'] ?>" class="photo"></img>
+                                            <a href='/product/<?= $value['id'] ?>/' 
+                                            class='product'>
+                                                <img src="../../accets/templats/defualt/img/<?= $value['image'] ?>" 
+                                                class="photo"></img>
                                             </a>
-                                            <div onclick="toggleLike(<?= $value['id'] ?>)" class="product-before-like">
-                                                <span id="like_<?= $value['id'] ?>" class="<?php if ($itemInCArt) echo "hiden" ?> like"></span>
-                                                <span id="active_like_<?= $value['id'] ?>" class="<?php if (!$itemInCArt) echo "hiden" ?> active-like"></span>
+                                            <div onclick="toggleLike(<?=$value['id']?>, <?=$_SESSION['user']?>)" 
+                                            class="product-before-like">
+                                                <span id="like_<?= $value['id'] ?>" 
+                                                class="<?php if ($itemInCArt) echo "hiden" ?> like"></span>
+                                                <span id="active_like_<?= $value['id'] ?>" 
+                                                class="<?php if (!$itemInCArt) echo "hiden" ?> active-like"></span>
                                             </div>
                                         </div>
                                         <div class="product-info">
@@ -55,9 +60,13 @@
                                                 <span class='info-price'><?= $value['price'] ?> ₽</span>
                                                 <div class="actioncart">
                                                     <span class="<?php if ($isCart !== false) echo 'hiden' ?>
-                                                     info-addcart" id="infoAddCart_<?= $value['id'] ?>" onclick="addToCartFromHome(<?= $value['id'] ?>)"></span>
+                                                     info-addcart" id="infoAddCart_<?= $value['id'] ?>" 
+                                                     onclick="addToCartFromHome(<?=$value['id']?>, 
+                                                     <?=$_SESSION['user']?>)"></span>
                                                     <span class="<?php if ($isCart === false) echo 'hiden' ?> 
-                                                    info-removecart" id="infoRemoveCart_<?= $value['id'] ?>" onclick="removeFromCartHome(<?= $value['id'] ?>)"></span>
+                                                    info-removecart" id="infoRemoveCart_<?= $value['id'] ?>" 
+                                                    onclick="removeFromCartHome(<?=$value['id']?>, 
+                                                    <?=$_SESSION['user']?>)"></span>
                                                 </div>
                                             </div>
                                         </div>
@@ -85,11 +94,15 @@
                                     <div class='slaider-item-Wumen'>
                                         <div class="product-img">
                                             <a href='/product/<?= $value['id'] ?>/' class='product'>
-                                                <img class='photo' src='../../accets/templats/defualt/img/<?= $value['image'] ?>'></img>
+                                                <img class='photo' 
+                                                src='../../accets/templats/defualt/img/<?=$value['image']?>'></img>
                                             </a>
-                                            <div onclick="toggleLike(<?= $value['id'] ?>)" class="product-before-like">
-                                                <span id="like_<?= $value['id'] ?>" class="<?php if ($itemInCArt) echo "hiden" ?> like"></span>
-                                                <span id="active_like_<?= $value['id'] ?>" class="<?php if (!$itemInCArt) echo "hiden" ?> active-like"></span>
+                                            <div onclick="toggleLike(<?=$value['id']?>, <?=$_SESSION['user']?>)" 
+                                            class="product-before-like">
+                                                <span id="like_<?= $value['id'] ?>" 
+                                                class="<?php if ($itemInCArt) echo "hiden" ?> like"></span>
+                                                <span id="active_like_<?= $value['id'] ?>" 
+                                                class="<?php if (!$itemInCArt) echo "hiden" ?> active-like"></span>
                                             </div>
                                         </div>
                                         <div class="product-info">
@@ -98,9 +111,13 @@
                                                 <span class='info-price'><?= $value['price'] ?> ₽</span>
                                                 <div class="actioncart">
                                                     <span class="<?php if ($isCart !== false) echo 'hiden' ?>
-                                                     info-addcart" id="infoAddCart_<?= $value['id'] ?>" onclick="addToCartFromHome(<?= $value['id'] ?>)"></span>
+                                                     info-addcart" id="infoAddCart_<?= $value['id'] ?>" 
+                                                     onclick="addToCartFromHome(<?=$value['id']?>, 
+                                                     <?=$_SESSION['user']?>)"></span>
                                                     <span class="<?php if ($isCart === false) echo 'hiden' ?> 
-                                                    info-removecart" id="infoRemoveCart_<?= $value['id'] ?>" onclick="removeFromCartHome(<?= $value['id'] ?>)"></span>
+                                                    info-removecart" id="infoRemoveCart_<?= $value['id'] ?>" 
+                                                    onclick="removeFromCartHome(<?=$value['id']?>, 
+                                                    <?=$_SESSION['user']?>)"></span>
                                                 </div>
                                             </div>
                                         </div>
@@ -128,11 +145,15 @@
                                     <div class='slaider-item-Men'>
                                         <div class="product-img">
                                             <a href='/product/<?= $value['id'] ?>/' class='product'>
-                                                <img class='photo' src='../../accets/templats/defualt/img/<?= $value['image'] ?>'></img>
+                                                <img class='photo' 
+                                                src='../../accets/templats/defualt/img/<?=$value['image']?>'></img>
                                             </a>
-                                            <div onclick="toggleLike(<?= $value['id'] ?>)" class="product-before-like">
-                                                <span id="like_<?= $value['id'] ?>" class="<?php if ($itemInCArt) echo "hiden" ?> like"></span>
-                                                <span id="active_like_<?= $value['id'] ?>" class="<?php if (!$itemInCArt) echo "hiden" ?> active-like"></span>
+                                            <div onclick="toggleLike(<?=$value['id']?>, <?=$_SESSION['user']?>)" 
+                                            class="product-before-like">
+                                                <span id="like_<?= $value['id'] ?>" 
+                                                class="<?php if ($itemInCArt) echo "hiden" ?> like"></span>
+                                                <span id="active_like_<?= $value['id'] ?>" 
+                                                class="<?php if (!$itemInCArt) echo "hiden" ?> active-like"></span>
                                             </div>
                                         </div>
                                         <div class="product-info">
@@ -141,9 +162,13 @@
                                                 <span class='info-price'><?= $value['price'] ?> ₽</span>
                                                 <div class="actioncart">
                                                     <span class="<?php if ($isCart !== false) echo 'hiden' ?>
-                                                     info-addcart" id="infoAddCart_<?= $value['id'] ?>" onclick="addToCartFromHome(<?= $value['id'] ?>)"></span>
+                                                     info-addcart" id="infoAddCart_<?= $value['id'] ?>" 
+                                                     onclick="addToCartFromHome(<?=$value['id']?>, 
+                                                     <?=$_SESSION['user']?>)"></span>
                                                     <span class="<?php if ($isCart === false) echo 'hiden' ?> 
-                                                    info-removecart" id="infoRemoveCart_<?= $value['id'] ?>" onclick="removeFromCartHome(<?= $value['id'] ?>)"></span>
+                                                    info-removecart" id="infoRemoveCart_<?= $value['id'] ?>" 
+                                                    onclick="removeFromCartHome(<?= $value['id'] ?>, 
+                                                    <?=$_SESSION['user']?>)"></span>
                                                 </div>
                                             </div>
                                         </div>
