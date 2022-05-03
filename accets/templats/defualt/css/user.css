@@ -8,6 +8,10 @@
     width: 200px;
 }
 
+.content-title {
+    color: #333;
+}
+
 .block-href {
     display: flex;
     flex-direction:column;
@@ -119,4 +123,38 @@
     text-align: center;
     border-radius: 5px;
     margin-bottom: 20px;
+}
+
+.table-order {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-collapse:collapse;
+}
+
+.title td {
+    padding: 15px;
+    color: #747474;
+}
+
+.table-order tr:nth-child(2n) {
+    background-color: rgba(0,0,0,0.05);
+}
+
+.table-td {
+    padding: 10px;
+    font-size: 18px;
+}
+
+.font td{
+    font-weight: 200;
+}
+
+.rigth {
+    text-align: right;
+}
+
+.font .id {
+    color: #ccc;
+    text-decoration: underline;
+    font-weight: 600;
 }

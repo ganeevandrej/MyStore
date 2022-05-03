@@ -21,8 +21,34 @@
                     </div>
                 </div>
                 <div class="inner-content">
-                    <h2 class="content-title">История заказов</h2>
-                    <div></div>
+                    <h1 class="content-title">История заказов</h1>
+                    <div>
+                        <table class="table-order">
+                            <tr class="table-row title">
+                                <td class="table-td">Дата оформления</td>
+                                <td class="table-td">Номер заказа</td>
+                                <td class="table-td">Статус</td>
+                                <td class="table-td rigth">Оплата</td>
+                                <td class="table-td rigth">Сумма заказа</td>
+                            </tr>
+                            <?php foreach($ordersUser as $key=>$value):?>
+                                <tr class="table-row font">
+                                    <td class="table-td"><?=$value['date_created']?></td>
+                                    <td class="table-td id"><?=$value['id']?></td>
+                                    <td class="table-td">Принят</td>
+                                    <td class="table-td rigth">Не оплачен</td>
+                                    <td class="table-td rigth"><?=$value['price']?> ₽</td>
+                                </tr>
+                            <?php endforeach;?>
+                            <tr class="table-row">
+                                <td class="table-td"></td>
+                                <td class="table-td"></td>
+                                <td class="table-td"></td>
+                                <td class="table-td rigth"></td>
+                                <td class="table-td rigth">Сумма выполненных заказов: 0 ₽</td>
+                            </tr>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>

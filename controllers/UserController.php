@@ -3,6 +3,7 @@
 include('./models/cotegoriesModel.php');
 include('./models/productsModel.php');
 include('./models/usersModel.php');
+include('./models/orderModel.php');
 
 function extendce() {
     if(!$_SESSION['user']) {
@@ -15,7 +16,9 @@ function extendce() {
 function indexAction() {
     $page = 'orders';
     $rsCategories = extendce();
-    loadUserPage($rsCategories, $page);
+    $ordersUser = getOrderByUserId($_SESSION['user']['id']);
+
+    loadUserOrders($rsCategories, $page, $ordersUser);
 }
 
 function adressAction() {

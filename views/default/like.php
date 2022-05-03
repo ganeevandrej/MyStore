@@ -32,7 +32,7 @@
                                         </a>
                                         <button class="close-item" id="removelike_<?= $value['id'] ?>" 
                                         <?php if (!$itemInlike) {echo "class='hiden' ";} ?> 
-                                        onclick="removeFromlikePage(<?=$value['id']?>)">
+                                        onclick="removeFromlikePage(<?=$value['id']?>, <?=$_SESSION['user']?>)">
                                             <img src="/accets/templats/defualt/photo/ikon/close.png">
                                         </button>
                                     </div>

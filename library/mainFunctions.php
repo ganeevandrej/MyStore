@@ -26,7 +26,7 @@ function loadCategories($page, $rsCategories, $rsCategoties, $rsCategory)
     include(TemplatePrefix . $page . TemplatePostfix);
 }
 
-function loadProduct($page, $product, $rsCategories)
+function loadProduct($page, $product, $rsCategories, $productPhoto)
 {
     $countCart = count($_SESSION['cart']);
     $countLike = count($_SESSION['like']);
@@ -68,6 +68,14 @@ function loadAuthPage($page, $rsCategories, $inputValidation) {
     include(TemplatePrefix . $page . TemplatePostfix);
 }
 
+function loadUserOrders($rsCategories, $page, $ordersUser) {
+    $countCart = count($_SESSION['cart']);
+    $countLike = count($_SESSION['like']);
+    $user = $_SESSION['user'];
+
+    include(TemplatePrefix . $page . TemplatePostfix);
+}
+
 function loadUserPage($rsCategories, $page) {
     $countCart = count($_SESSION['cart']);
     $countLike = count($_SESSION['like']);
@@ -81,5 +89,12 @@ function loadContactsPage($page, $rsCategories, $message, $messageok = null) {
     $countLike = count($_SESSION['like']);
     $user = $_SESSION['user'];
 
+    include(TemplatePrefix . $page . TemplatePostfix);
+}
+
+function loadOrder($rsCategories, $page, $rsProducts) {
+    $countCart = count($_SESSION['cart']);
+    $countLike = count($_SESSION['like']);
+    $user = $_SESSION['user'];
     include(TemplatePrefix . $page . TemplatePostfix);
 }

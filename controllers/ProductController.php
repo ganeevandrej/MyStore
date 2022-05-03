@@ -9,8 +9,9 @@ function indexAction() {
         exit();
     }
     $page = 'product';
+    $productPhoto = getProductPhoto($product_id);
     $rsCategories = getAllCategories();
     $product = getProductById($product_id);
 
-    loadProduct($page, $product, $rsCategories);
+    loadProduct($page, $product, $rsCategories, $productPhoto);
 }

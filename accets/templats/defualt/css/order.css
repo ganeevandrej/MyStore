@@ -1,0 +1,250 @@
+.order-inner {
+    display: flex;
+}
+
+.order-data-user, .order-info-product {
+    width: 635px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 32px;
+}
+
+.order-data-user {
+    padding-right: 10px;
+    border-right: 1px solid rgba(153, 153, 153, 0.5);
+}
+
+textarea {
+    padding: 5px;
+    margin: 0;
+}
+
+.order-info-product {
+    padding-left: 10px;
+    border-left: 1px solid rgba(153, 153, 153, 0.5);
+}
+
+.login-user, .delivery, .radio-inputs, .koment {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.login-user h3, 
+.login-user span, 
+.login-user button{
+    margin: 10px 0;
+}
+
+.login-user span {
+    font-weight: 200;
+    letter-spacing: 1px;
+}
+
+.title {
+    color: #333;
+}
+
+.title-order {
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.order {
+    border: none;
+    padding: 10px 15px;
+    background-color: #525665;
+    color: white;
+    font-size: 15px;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+.orders {
+    border: none;
+    padding: 15px;
+    background-color: #525665;
+    color: white;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.adress-delivery {
+    display: flex;
+    flex-direction: column;
+}
+
+.delivery h2 {
+    color: #333;
+}
+
+.adress-delivery input, 
+.radio-inputs {
+    margin-top: 15px;
+}
+
+.adress-delivery input {
+    width: 610px;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    outline: none;
+}
+
+.radio-inputs {
+    width: 100%;
+}
+
+.adress-delivery input:focus {
+    border:2px solid #B0B0B1;
+}
+
+.adress-delivery label {
+    font-size: 16px;
+}
+
+.adress-delivery label::after {
+    content: '';
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    margin-left: 3px;
+    margin-top: 3px;
+    background: url(../photo/ikon/red.png) no-repeat;
+    background-size: cover;
+}
+
+.self-call {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    margin-top: 5px;
+    justify-content: space-between;
+}
+
+.self-call:hover {
+    border:1px solid rgba(153, 153, 153, 0.5);
+}
+
+textarea {
+    width: 624px;
+}
+
+.radio-name {
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+    margin-left: 15px;
+}
+
+.radio-name-title {
+    color: #333;
+    font-size: 24px;
+}
+
+.radio-name-subtitle {
+    color: #747474;
+    font-size: 16px;
+}
+
+.radio-price {
+    font-size: 24px;
+    padding-right: 5px;
+    font-weight: 700;
+}
+
+.self-call input[type=radio]:checked {
+    background: url() 0 0 no-repeat;
+}
+
+.order-price {
+    display: flex;
+    flex-direction: column;
+}
+
+.sub-order::after {
+    content: '';
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    margin-left: 3px;
+    margin-top: 3px;
+    background: url(../photo/ikon/red.png) no-repeat;
+    background-size: cover;
+}
+
+.products-from-cart {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+}
+
+.product-item-cart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.product-item-name {
+    margin-right: auto;
+    margin-left: 20px;
+}
+
+.product-item-photo img {
+    width: 70px;
+    height: auto;
+}
+
+.product-item-name {
+    font-size: 20px;
+}
+
+.product-item-price {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.count-and-price, .title-price-order {
+    border-top: 1px solid #ccc;
+    padding: 20px 0;
+}
+
+.price-delivery-order {
+    margin-top: 10px;
+}
+
+.count-and-price {
+    display: flex;
+    flex-direction: column;
+}
+
+.price-product-order, 
+.price-delivery-order, 
+.title-price-order {
+    display: flex;
+    justify-content: space-between;
+}
+
+.title-order-price {
+    font-size: 16px;
+    font-weight: 200;
+}
+
+.order-price {
+    margin-left: auto;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.title--price {
+    font-size: 24px;
+}
+
+.rub {
+    font-weight: 700;
+    font-size: 20px;
+}

@@ -1,0 +1,248 @@
+.product-inner {
+    display: flex;
+}
+
+.product-block, .product-descrip {
+    width: 635px;
+}
+
+.product-descrip {
+    padding: 30px 0;
+}
+
+.slaider-track-Photo {
+    display: flex;
+    transition: .8s;
+    position: relative;
+    margin-left: 52px;
+}
+
+.slaider-track-Photo img {
+    width: 400px;
+    height: auto;
+    background-size: cover;
+}
+
+.slaider-Photo {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-top: 30px;
+    width: 635px;
+    overflow: hidden;
+}
+
+.slaider-Photo {
+    padding-bottom: 20px;
+}
+
+.btn-prev-Photo, .btn-next-Photo {
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    padding: 10px;
+    z-index: 500;
+}
+
+.btn-prev-Photo {
+    left: 0;
+}
+
+.btn-next-Photo {
+    right: 131px;
+}
+
+.pre {
+    display: block;
+    background: url(../photo/ikon/prep.png) no-repeat;
+    width: 32px;
+    height: 32px;
+}
+
+.next {
+    display: block;
+    background: url(../photo/ikon/next.png) no-repeat;
+    width: 32px;
+    height: 32px;
+}
+
+.reiting {
+    display: flex;
+}
+
+.reiting span {
+    width: 24px;
+    height: 24px;
+    display: block;
+    margin: 0 5px;
+    background: url(../photo/ikon/reiting.png) no-repeat;
+}
+
+.product-name {
+    color: #333;
+    margin: 0;
+}
+
+.btn-size button {
+    padding: 10px;
+    border: none;
+    background-color: #f7f7f7;
+    font-size: 18px;
+    width: 50px;
+    height: 50px;
+}
+
+.reiting .text {
+    color: #B0B0B1;
+    background: none;
+    margin: 0;
+}
+
+.descrip {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-cart {
+    padding: 15px 75px;
+    font-size: 20px;
+    border: none;
+    background-color: #525665;
+    color: white;
+}
+
+.btn-like {
+    padding: 14px;
+    border: none;
+    background-color: #f7f7f7;
+}
+
+.btn-like-ok {
+    display: block;
+    width: 24px;
+    height: 24px;
+    background: url(../photo/ikon/icon-heart.png) no-repeat;
+}
+
+.btn-like-no {
+    display: block;
+    width: 24px;
+    height: 24px;
+    background: url(../photo/ikon/like.png) no-repeat;
+}
+
+.cart-to-like {
+    display: flex;
+}
+ 
+.reiting, .size, .cart-to-like {
+    margin-bottom: 35px;
+    margin-top: 10px;
+}
+
+.product-price {
+    font-size: 36px;
+    color: #333;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.title-size {
+    font-size: 18px;
+    font-weight: 200;
+}
+
+.btn-size {
+    margin-top: 15px;
+}
+
+.btn-size button {
+    margin-right: 10px;
+}
+
+.block-btn-like {
+    margin-left: 25px;
+}
+
+.btn-size .btn-recolor {
+    background-color: #525665;
+    color: white;
+}
+
+.description .ikon {
+    width: 24px;
+    height: 24px;
+    display: block;
+    background: url(../photo/ikon/description.png) no-repeat;
+    filter: invert(50%);
+}
+
+.setting .ikon {
+    width: 24px;
+    height: 24px;
+    display: block;
+    background: url(../photo/ikon/settings.png) no-repeat;
+    filter: invert(50%);
+}
+
+.reviews .ikon {
+    width: 24px;
+    height: 24px;
+    display: block;
+    background: url(../photo/ikon/speech.png) no-repeat;
+    filter: invert(50%);
+}
+
+.title-description {
+    font-size: 32px;
+    color: #999999;
+    margin-left: 10px;
+}
+
+.description-header {
+    display: flex;
+}
+
+
+.reviews, .setting,
+.description {
+    display: flex;
+    margin-right: 30px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.reviews:hover .ikon, .setting:hover .ikon,
+.description:hover .ikon {
+    filter: invert(0%);
+    cursor: pointer;
+}
+
+.reviews:hover .title-description, .setting:hover .title-description,
+.description:hover .title-description {
+    color: #333;
+    cursor: pointer;
+}
+
+.block-footer {
+    margin-top: 20px;
+    font-size: 22px;
+    font-weight: 200;
+}
+
+.reviews-product {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.reviews-product button{
+    margin-top: 15px;
+    padding: 10px;
+    border: none;
+    background-color: #525665;
+    color: white;
+    font-size: 20px;
+    font-weight: 200;
+}
+

@@ -1,5 +1,4 @@
 const checkCheckBox = () => {
-    debugger
     elem = document.getElementById('userCheck');
 
     if (elem.checked) {
@@ -209,6 +208,7 @@ const totalPrice = () => {
 const increment = (id) => {
     let input = document.getElementById('inputCount_' + id).value;
     input++;
+    document.querySelector('.inputCount_' + id).innerHTML = input;
 
     if (input > 1) {
         document.getElementById('decrement_' + id).disabled = false;
@@ -222,6 +222,7 @@ const increment = (id) => {
 const decrement = (id) => {
     let input = document.getElementById('inputCount_' + id).value;
     input--;
+    document.querySelector('.inputCount_' + id).innerHTML = input;
 
     if (input <= 1) {
         document.getElementById('decrement_' + id).disabled = true;
@@ -229,4 +230,95 @@ const decrement = (id) => {
 
     document.getElementById('inputCount_' + id).value = input;
     countPrice(id);
+}
+
+const checkedCallok = () => {
+    if (!document.querySelector('#self').checked === true) {
+        document.querySelector('#self').checked = true;
+        document.querySelector('#delivery').innerHTML = 0;
+        let elemDelivery = document.querySelector('#inpTitlePrice').value;
+        elemDelivery = +elemDelivery - +300;
+        console.log(elemDelivery);
+        document.querySelector('#titlePrice').innerHTML = elemDelivery;
+        document.querySelector('#inpTitlePrice').value = elemDelivery;
+    }
+}
+
+const checkedCalldel = () => {
+    if (!document.querySelector('#courier').checked === true) {
+        document.querySelector('#courier').checked = true;
+        document.querySelector('#delivery').innerHTML = 300;
+        let elemDelivery = document.querySelector('#inpTitlePrice').value;
+        elemDelivery = +elemDelivery + +300;
+        console.log(elemDelivery);
+        document.querySelector('#titlePrice').innerHTML = elemDelivery;
+        document.querySelector('#inpTitlePrice').value = elemDelivery;
+    }
+}
+
+const messageok = (message) => {
+    console.log(message);
+    alert(message);
+}
+
+const togleLikeFromProsuct = (id, user) => {
+    debugger
+    let elem1 = document.getElementById('productLikeOk_' + id).classList.contains('hiden');
+
+    if (user) {
+        if (!elem1) {
+            fetch("http://myshop/like/addtolike/" + id + "/")
+                .then(response => response.json())
+                .then((result) => {
+                    if (result['success']) {
+                        document.getElementById('countLike').innerHTML = result['countItem'];
+                        document.getElementById('productLikeOk_' + id).classList.add('hiden');
+                        document.getElementById('productLikeNo_' + id).classList.remove('hiden');
+                        document.getElementById('textBlockOk').innerHTML = 'Товар добавлен в избранное';
+                        document.getElementById('recoveryBlockOk').classList.remove('hiden');
+                        let elem = document.getElementById('recoveryBlockOk');
+                        timeElem(elem);
+                    }
+                })
+        }
+        else {
+            fetch("http://myshop/like/removefromlike/" + id + "/")
+                .then(response => response.json())
+                .then((result) => {
+                    if (result['success']) {
+                        document.getElementById('countLike').innerHTML = result['countItem'];
+                        document.getElementById('productLikeNo_' + id).classList.add('hiden');
+                        document.getElementById('productLikeOk_' + id).classList.remove('hiden');
+                        document.getElementById('textBlockNo').innerHTML = 'Товар удален из избранное';
+                        document.getElementById('recoveryBlockNo').classList.remove('hiden');
+                        let elem = document.getElementById('recoveryBlockNo');
+                        timeElem(elem);
+                    }
+                })
+        }
+    }
+    else alert('Зарегестрируйтесь или войдите в систему');
+}
+
+const reColor = (name) => {
+    elem = document.querySelector('#' + name);
+    elem.classList.toggle('btn-recolor');
+}
+
+const description = () => {
+    document.querySelector('.description-text').classList.remove('hiden');
+    document.querySelector('.setting-product').classList.add('hiden');
+    document.querySelector('.reviews-product').classList.add('hiden');
+}
+
+const setting = () => {
+    document.querySelector('.description-text').classList.add('hiden');
+    document.querySelector('.setting-product').classList.remove('hiden');
+    document.querySelector('.reviews-product').classList.add('hiden');
+}
+
+const reviews = () => {
+    document.querySelector('.description-text').classList.add('hiden');
+    document.querySelector('.setting-product').classList.add('hiden');
+    document.querySelector('.reviews-product').classList.remove('hiden');
 }

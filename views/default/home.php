@@ -186,5 +186,8 @@
     </main>
     <?php include('./views/default/footer.php') ?>
     </body>
-
+    <?php if($_SESSION['order']['ok']):?>
+        <script>messageok("<?=$_SESSION['order']['ok']?>")</script>
+        <?php unset($_SESSION['order'])?>
+    <?php endif;?>
 </html>

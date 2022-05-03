@@ -69,3 +69,21 @@ function getProductsFromCart($itemId) {
         return null;
     }
 }
+
+function getProductsFromOrder($string) {
+    global $pdo;
+    $sql = "SELECT * FROM products WHERE id in ($string)";
+    $query = $pdo->prepare($sql);
+    $query->execute(); 
+
+    return $query->fetchAll();
+}
+
+function getProductPhoto($product_id) {
+    global $pdo;
+    $sql = "SELECT * FROM photoProducts WHERE product_id = $product_id";
+    $query = $pdo->prepare($sql);
+    $query->execute(); 
+
+    return $query->fetch();
+}

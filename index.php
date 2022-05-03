@@ -11,6 +11,7 @@ if ( (!isset($_SESSION["cart"])) || (!isset($_SESSION["like"])) ) {
 // $_SESSION["like"] = [];
 
 
+
 include('./config/config.php');
 include('./config/db.php');
 include('./library/mainFunctions.php');
