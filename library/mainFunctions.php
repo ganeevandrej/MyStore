@@ -17,7 +17,7 @@ function loadTemplate($page, $rsCategories, $rsProductsWomen, $rsProductsMen, $r
     include(TemplatePrefix . $page . TemplatePostfix);
 }
 
-function loadCategories($page, $rsCategories, $rsCategoties, $rsCategory)
+function loadCategories($page, $rsCategories, $rsProductCart, $rsCategory)
 {
     $countCart = count($_SESSION['cart']);
     $countLike = count($_SESSION['like']);
@@ -26,7 +26,7 @@ function loadCategories($page, $rsCategories, $rsCategoties, $rsCategory)
     include(TemplatePrefix . $page . TemplatePostfix);
 }
 
-function loadProduct($page, $product, $rsCategories, $productPhoto)
+function loadProduct($page, $product, $rsCategories, $productPhoto, $cookie)
 {
     $countCart = count($_SESSION['cart']);
     $countLike = count($_SESSION['like']);

@@ -322,3 +322,17 @@ const reviews = () => {
     document.querySelector('.setting-product').classList.add('hiden');
     document.querySelector('.reviews-product').classList.remove('hiden');
 }
+
+// const open = (categories) => {
+//     debugger
+//     let elem = document.getElementById('form');
+//     // elem.addEventListener('change', function(){
+//     //     elem.submit(categories);
+//     // });
+// }
+
+let elem = document.getElementById('form');
+    console.log(elem);
+    elem.addEventListener('change', function(){
+        elem.submit();
+    });

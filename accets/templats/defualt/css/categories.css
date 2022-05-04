@@ -1,5 +1,39 @@
-.categories {
-    
+.filters-block {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+
+.filters {
+    display: flex;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 100;
+    border: none;
+    background-color: #ededed;
+    color: #333;
+}
+
+.ikon-filters {
+    margin-left: 10px;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: url(../photo/ikon/settings.png) no-repeat;
+    background-size: cover;
+}
+
+.sorting {
+    padding: 7px;
+    border: none;
+    font-size: 18px;
+    font-weight: 100;
+    color: #333;
+}
+
+.sorting:focus {
+    border:2px solid #B0B0B1;
+    outline: none; 
 }
 
 .item-product {

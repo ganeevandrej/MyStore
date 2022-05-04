@@ -11,7 +11,17 @@
     <?php include('./views/default/header.php') ?>
     <main>
         <div class="wrapper">
-            <div class="product-panel">Печеньки</div>
+            <div class="product-panel">
+                <div class="panel-cookie">
+                    <a href="/myshop">Главная \</a>
+                    <a href="http://myshop/?controller=categories&categories_id=<?=$cookie['categories_id']?>">
+                        <?php echo $cookie['categories_id'] == 1 ? "Женщины" : "Мужчины"?> \
+                    </a>
+                    <a href="/?controller=categories&categories_id=<?=$cookie['categories_id']?>&subcategories_id=<?=$cookie['id']?>">
+                        <?=$cookie['name']?>
+                    </a>
+                </div>
+            </div>
             <div class="product-inner">
                 <div class="product-block">
                     <div class="slaider-Photo">
@@ -108,7 +118,7 @@
                     <button>Написать отзыв</button>
                 </div>
             </div>
-            <div class="slaider-Similar">
+            <!-- <div class="slaider-Similar">
                 <button class="btn-prev-Similar">
                     <span class="pre"></span>
                 </button>
@@ -120,7 +130,7 @@
                 <button class="btn-next-Similar">
                     <span class="next"></span>
                 </button>
-            </div>
+            </div> -->
         </div>
     </main>
     <?php include('./views/default/footer.php') ?>

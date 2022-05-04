@@ -2,7 +2,6 @@
     <link rel="stylesheet" href="../../accets/templats/defualt/css/style.css">
     <link rel="stylesheet" href="../../accets/templats/defualt/css/header.css">
     <link rel="stylesheet" href="../../accets/templats/defualt/css/footer.css">
-    <script src="../../accets/templats/defualt/js/index.js"></script>
     </head>
 
     <body>

@@ -38,6 +38,7 @@
         </div>
     </div>
 </footer>
+<script src="../../accets/templats/defualt/js/index.js"></script>
 <script src="../../accets/templats/defualt/js/slaiderWomen.js"></script>
 <script src="../../accets/templats/defualt/js/slaiderMen.js"></script>
 <script src="../../accets/templats/defualt/js/slaiderPopular.js"></script>

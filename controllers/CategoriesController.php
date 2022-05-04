@@ -20,9 +20,93 @@ function indexAction() {
     if($catId !== null & $subcatId !== null) {
         $rsSubCategory = getSubCategories($catId, $subcatId);
         $rsCategories = getAllCategories();
-        $rsCategoties = getSubcategoriesId($catId, $subcatId);
-        loadCategories($page, $rsCategories, $rsCategoties, $rsSubCategory);
+        $rsProductCart = getSubcategoriesId($catId, $subcatId);
+        loadCategories($page, $rsCategories, $rsProductCart, $rsSubCategory);
+    }
+}
+
+function sortingNameAction() {
+    $select = $_POST['select'];
+    $cat = $_POST['categories'];
+    $subCat = $_POST['subcategories'] ? $_POST['subcategories']: null;
+
+    if($cat && $subCat && $select == 'descending_price') {
+        $rsCategories = getAllCategories();
+        $rsSubCategory = getSubCategories($cat, $subCat);
+        $rsCat = getSubcatDescPriceId($cat, $subCat);
+        $page = 'categories';
+        loadCategories($page, $rsCategories, $rsCat, $rsSubCategory);
     }
 
-    
+    if($cat && $subCat && $select == 'price') {
+        $rsCategories = getAllCategories();
+        $rsSubCategory = getSubCategories($cat, $subCat);
+        $rsCat = getSubcatAscPriceId($cat, $subCat);
+        $page = 'categories';
+        loadCategories($page, $rsCategories, $rsCat, $rsSubCategory);
+    }
+
+    if($cat && $subCat && $select == 'age') {
+        $rsCategories = getAllCategories();
+        $rsSubCategory = getSubCategories($cat, $subCat);
+        $rsCat = getSubcatAscId($cat, $subCat);
+        $page = 'categories';
+        loadCategories($page, $rsCategories, $rsCat, $rsSubCategory);
+    }
+
+    if($cat && $subCat && $select == 'name') {
+        $rsCategories = getAllCategories();
+        $rsSubCategory = getSubCategories($cat, $subCat);
+        $rsCat = getSubcatName($cat, $subCat);
+        $page = 'categories';
+        loadCategories($page, $rsCategories, $rsCat, $rsSubCategory);
+    }
+
+    if($cat && $subCat && $select == 'descending_age') {
+        $rsCategories = getAllCategories();
+        $rsSubCategory = getSubCategories($cat, $subCat);
+        $rsCat = getSubcatDescId($cat, $subCat);
+        $page = 'categories';
+        loadCategories($page, $rsCategories, $rsCat, $rsSubCategory);
+    }
+
+    if($cat && !$subCat && $select == 'descending_age') {
+        $rsCategories = getAllCategories();
+        $rsCategory = getCategories($cat);
+        $rsCat = getCategoriesDescId($cat);
+        $page = 'categories';
+        loadCategories($page, $rsCategories, $rsCat, $rsCategory);
+    }
+
+    if($cat && !$subCat && $select == 'age') {
+        $rsCategories = getAllCategories();
+        $rsCategory = getCategories($cat);
+        $rsCat = getCategoriesAscId($cat);
+        $page = 'categories';
+        loadCategories($page, $rsCategories, $rsCat, $rsCategory);
+    }
+
+    if($cat && !$subCat && $select == 'price') {
+        $rsCategories = getAllCategories();
+        $rsCategory = getCategories($cat);
+        $rsCat = getCategoriesAscPrice($cat);
+        $page = 'categories';
+        loadCategories($page, $rsCategories, $rsCat, $rsCategory);
+    }
+
+    if($cat && !$subCat && $select == 'descending_price') {
+        $rsCategories = getAllCategories();
+        $rsCategory = getCategories($cat);
+        $rsCat = getCategoriesDescPrice($cat);
+        $page = 'categories';
+        loadCategories($page, $rsCategories, $rsCat, $rsCategory);
+    }
+
+    if($cat && !$subCat && $select == 'name') {
+        $rsCategories = getAllCategories();
+        $rsCategory = getCategories($cat);
+        $rsCat = getCategoriesName($cat);
+        $page = 'categories';
+        loadCategories($page, $rsCategories, $rsCat, $rsCategory);
+    }
 }

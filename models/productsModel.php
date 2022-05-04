@@ -36,9 +36,99 @@ function getProductsBySubategories($sub_id, $id) {
     return $query->fetchAll();
 }
 
+function getProductsBySubategoriesSortDescPrice($sub_id, $id) {
+    global $pdo;
+    $sql = "SELECT * FROM products WHERE subcategories_id=$sub_id AND categories_id=$id ORDER BY price DESC";
+    $query = $pdo->prepare($sql);
+    $query->execute();
+
+    return $query->fetchAll();
+}
+
+function getProductsBySubategoriesSortAscPrice($sub_id, $id) {
+    global $pdo;
+    $sql = "SELECT * FROM products WHERE subcategories_id=$sub_id AND categories_id=$id ORDER BY price ASC";
+    $query = $pdo->prepare($sql);
+    $query->execute();
+
+    return $query->fetchAll();
+}
+
+function getProductsBySubategoriesSortDescId($sub_id, $id) {
+    global $pdo;
+    $sql = "SELECT * FROM products WHERE subcategories_id=$sub_id AND categories_id=$id ORDER BY id DESC";
+    $query = $pdo->prepare($sql);
+    $query->execute();
+
+    return $query->fetchAll();
+}
+
+function getProductsBySubategoriesSortName($sub_id, $id) {
+    global $pdo;
+    $sql = "SELECT * FROM products WHERE subcategories_id=$sub_id AND categories_id=$id ORDER BY name ASC";
+    $query = $pdo->prepare($sql);
+    $query->execute();
+
+    return $query->fetchAll();
+}
+
+function getProductsBySubategoriesSortAscId($sub_id, $id) {
+    global $pdo;
+    $sql = "SELECT * FROM products WHERE subcategories_id=$sub_id AND categories_id=$id ORDER BY id ASC";
+    $query = $pdo->prepare($sql);
+    $query->execute();
+
+    return $query->fetchAll();
+}
+
 function getProductsByCategories($id) {
     global $pdo;
     $sql = "SELECT * FROM products WHERE categories_id=$id";
+    $query = $pdo->prepare($sql);
+    $query->execute();
+
+    return $query->fetchAll();
+}
+
+function getProductsDescId($id) {
+    global $pdo;
+    $sql = "SELECT * FROM products WHERE categories_id=$id  ORDER BY id DESC";
+    $query = $pdo->prepare($sql);
+    $query->execute();
+
+    return $query->fetchAll();
+}
+
+function getProductsAscId($id) {
+    global $pdo;
+    $sql = "SELECT * FROM products WHERE categories_id=$id  ORDER BY id ASC";
+    $query = $pdo->prepare($sql);
+    $query->execute();
+
+    return $query->fetchAll();
+}
+
+function getProductsAscPrice($id) {
+    global $pdo;
+    $sql = "SELECT * FROM products WHERE categories_id=$id  ORDER BY price ASC";
+    $query = $pdo->prepare($sql);
+    $query->execute();
+
+    return $query->fetchAll();
+}
+
+function getProductsDescPrice($id) {
+    global $pdo;
+    $sql = "SELECT * FROM products WHERE categories_id=$id  ORDER BY price DESC";
+    $query = $pdo->prepare($sql);
+    $query->execute();
+
+    return $query->fetchAll();
+}
+
+function getProductsName($id) {
+    global $pdo;
+    $sql = "SELECT * FROM products WHERE categories_id=$id  ORDER BY name ASC";
     $query = $pdo->prepare($sql);
     $query->execute();
 

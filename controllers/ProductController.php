@@ -12,6 +12,7 @@ function indexAction() {
     $productPhoto = getProductPhoto($product_id);
     $rsCategories = getAllCategories();
     $product = getProductById($product_id);
+    $cookie = getCookie($product['subcategories_id']);
 
-    loadProduct($page, $product, $rsCategories, $productPhoto);
+    loadProduct($page, $product, $rsCategories, $productPhoto, $cookie);
 }

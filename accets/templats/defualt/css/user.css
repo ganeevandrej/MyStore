@@ -104,9 +104,7 @@
 }
 
 .block-message-ok {
-    /* width: 400px; */
     padding: 20px;
-    /* margin: auto; */
     color: white;
     background-color: #00ff7f;
     text-align: center;
@@ -115,9 +113,7 @@
 }
 
 .block-message-no {
-    /* width: 400px; */
     padding: 20px;
-    /* margin: auto; */
     color: white;
     background-color: #e34234;
     text-align: center;
